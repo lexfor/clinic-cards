@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS cards (
+id UUID NOT NULL,
+intolerances VARCHAR(255),
+height INT,
+weight INT,
+blood_type VARCHAR(255),
+user_id UUID NOT NULL,
+PRIMARY KEY (id),
+FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE);
